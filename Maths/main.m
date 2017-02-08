@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
         
         BOOL gameOn = TRUE;
         
-        //UserInput *userInput = [[UserInput alloc] init];
+       // UserInput *inputUser = [[UserInput alloc] init];
         
         ScoreKeeper *yourScore = [[ScoreKeeper alloc] init];
        
@@ -43,6 +43,8 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@", testQuestion.question);
             
             NSString *willYouGame = [UserInput getString];
+            
+            [questionManager addQuestion:testQuestion];
             
             if([willYouGame isEqualToString:@"quit"]){
                 
@@ -74,6 +76,7 @@ int main(int argc, const char * argv[]) {
             
             NSLog(@"%@",[questionManager timeOutput]);
             NSLog(@"%@", [yourScore scoreOutput]);
+        
             
             
 

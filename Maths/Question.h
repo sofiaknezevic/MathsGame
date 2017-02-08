@@ -21,6 +21,8 @@
 
 - (void) generateQuestion;
 
+- (NSInteger)answer;
+
 - (NSTimeInterval) answerTime;
 
 @end
