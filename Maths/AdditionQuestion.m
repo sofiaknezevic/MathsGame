@@ -17,8 +17,8 @@
     
     if (self) {
         
-        NSInteger random1 = arc4random_uniform(90)+10;
-        NSInteger random2 = arc4random_uniform(90)+10;
+        NSInteger random1 = arc4random_uniform(91)+10;
+        NSInteger random2 = arc4random_uniform(91)+10;
         
         _question = [NSString stringWithFormat:@"What is %li + %li?",
                      (long)random1, (long)random2];

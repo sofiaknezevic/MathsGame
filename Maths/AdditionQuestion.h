@@ -13,6 +13,9 @@
 @property NSInteger answer;
 @property NSString *question;
 
+@property NSDate *startTime;
+@property NSDate *endTime;
+
 
 - (instancetype) initWithQuestion;
 

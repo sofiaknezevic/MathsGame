@@ -35,6 +35,8 @@ int main(int argc, const char * argv[]) {
         
         NSInteger userAnswer;
         
+        printf("Math Game is starting... \nType 'quit' if you would like to quit!\n");
+        
         while (gameOn) {
             
             UserInput *userInput = [[UserInput alloc] init];
@@ -58,8 +60,8 @@ int main(int argc, const char * argv[]) {
                 
             }
             
-            
-            NSLog(@"%li", (long)userAnswer);
+            //testing!!
+            //NSLog(@"%li", (long)userAnswer);
             
             if((long)additionQuestion.answer == userAnswer){
      
