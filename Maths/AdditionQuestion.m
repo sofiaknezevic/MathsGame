@@ -11,11 +11,13 @@
 
 @implementation AdditionQuestion
 
-- (instancetype)initWithQuestion
+- (instancetype)initWithQuestionAndWithStartTime: (NSDate *)startTime
 {
     self = [super init];
     
     if (self) {
+        
+        _startTime = startTime;
         
         NSInteger random1 = arc4random_uniform(91)+10;
         NSInteger random2 = arc4random_uniform(91)+10;
@@ -28,6 +30,24 @@
     
     
     return self;
+}
+
+- (NSInteger)answer
+{
+    _endTime = [NSDate date];
+    
+    //testing
+    //NSLog(@"%@", _endTime);
+    
+    return _answer;
+}
+
+- (NSTimeInterval)answerTime
+{
+    NSTimeInterval timeAnswer = ((int)[_endTime timeIntervalSinceDate:_startTime]);
+    
+    
+    return timeAnswer;
 }
 
 

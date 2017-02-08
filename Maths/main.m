@@ -35,14 +35,19 @@ int main(int argc, const char * argv[]) {
         
         NSInteger userAnswer;
         
+        
+        
         printf("Math Game is starting... \nType 'quit' if you would like to quit!\n");
         
         while (gameOn) {
             
             UserInput *userInput = [[UserInput alloc] init];
 
-            AdditionQuestion *additionQuestion = [[AdditionQuestion alloc] initWithQuestion];
+            AdditionQuestion *additionQuestion = [[AdditionQuestion alloc] initWithQuestionAndWithStartTime:[NSDate date]];
             
+            //testing date & startTime
+            
+            //NSLog(@"%@", additionQuestion.startTime);
             
             NSLog(@"%@", additionQuestion.question);
             
@@ -63,6 +68,8 @@ int main(int argc, const char * argv[]) {
             //testing!!
             //NSLog(@"%li", (long)userAnswer);
             
+            
+            
             if((long)additionQuestion.answer == userAnswer){
      
                 NSLog(@"Right!");
@@ -80,8 +87,18 @@ int main(int argc, const char * argv[]) {
             
             NSLog(@"%@", [yourScore scoreOutput]);
             
+            //testing endTime
+            //NSLog(@"%@", additionQuestion.endTime);
+            //[additionQuestion answer];
+            
+            NSInteger intTime = [additionQuestion answerTime];
+            
+            NSLog(@"%li", (long)intTime);
+            
 
         }
+        
+        
         
         
         
