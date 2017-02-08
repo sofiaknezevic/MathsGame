@@ -10,6 +10,7 @@
 #import "UserInput.h"
 #import "AdditionQuestion.h"
 #import "ScoreKeeper.h"
+#import "QuestionManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -32,18 +33,22 @@ int main(int argc, const char * argv[]) {
         BOOL gameOn = TRUE;
         
         ScoreKeeper *yourScore = [[ScoreKeeper alloc] init];
+       
+        
+        QuestionManager *questionManager = [[QuestionManager alloc] initArray];
         
         NSInteger userAnswer;
-        
-        
         
         printf("Math Game is starting... \nType 'quit' if you would like to quit!\n");
         
         while (gameOn) {
             
             UserInput *userInput = [[UserInput alloc] init];
-
+            
+            
             AdditionQuestion *additionQuestion = [[AdditionQuestion alloc] initWithQuestionAndWithStartTime:[NSDate date]];
+            
+            [questionManager addQuestion:additionQuestion];
             
             //testing date & startTime
             
@@ -69,13 +74,12 @@ int main(int argc, const char * argv[]) {
             //NSLog(@"%li", (long)userAnswer);
             
             
-            
             if((long)additionQuestion.answer == userAnswer){
      
                 NSLog(@"Right!");
                 
                 yourScore.right++;
-                
+
                 
             }else{
                 
@@ -85,18 +89,23 @@ int main(int argc, const char * argv[]) {
                 
             }
             
+            
+            NSLog(@"%@",[questionManager timeOutput]);
             NSLog(@"%@", [yourScore scoreOutput]);
+            
+            
             
             //testing endTime
             //NSLog(@"%@", additionQuestion.endTime);
             //[additionQuestion answer];
             
-            NSInteger intTime = [additionQuestion answerTime];
+            //NSInteger intTime = [additionQuestion answerTime];
             
-            NSLog(@"%li", (long)intTime);
+            //NSLog(@"%li", (long)intTime);
             
 
         }
+        
         
         
         

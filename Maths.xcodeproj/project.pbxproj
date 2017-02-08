@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DA6EEF61E4BA6D000F1CC34 /* QuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA6EEF51E4BA6CF00F1CC34 /* QuestionManager.m */; };
 		5DDDD0B41E4A6BE00039D087 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDD0B31E4A6BE00039D087 /* main.m */; };
 		5DDDD0BC1E4A6F240039D087 /* UserInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDD0BB1E4A6F240039D087 /* UserInput.m */; };
 		5DDDD0BF1E4A7D4F0039D087 /* AdditionQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDD0BE1E4A7D4F0039D087 /* AdditionQuestion.m */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5DA6EEF41E4BA6CF00F1CC34 /* QuestionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionManager.h; path = ../QuestionManager.h; sourceTree = "<group>"; };
+		5DA6EEF51E4BA6CF00F1CC34 /* QuestionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionManager.m; path = ../QuestionManager.m; sourceTree = "<group>"; };
 		5DDDD0B01E4A6BE00039D087 /* Maths */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Maths; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DDDD0B31E4A6BE00039D087 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5DDDD0BA1E4A6F240039D087 /* UserInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInput.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				5DDDD0B31E4A6BE00039D087 /* main.m */,
+				5DA6EEF41E4BA6CF00F1CC34 /* QuestionManager.h */,
+				5DA6EEF51E4BA6CF00F1CC34 /* QuestionManager.m */,
 				5DDDD0BD1E4A7D4F0039D087 /* AdditionQuestion.h */,
 				5DDDD0BE1E4A7D4F0039D087 /* AdditionQuestion.m */,
 				5DDDD0C31E4AB10D0039D087 /* ScoreKeeper.h */,
@@ -134,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA6EEF61E4BA6D000F1CC34 /* QuestionManager.m in Sources */,
 				5DDDD0C51E4AB10D0039D087 /* ScoreKeeper.m in Sources */,
 				5DDDD0B41E4A6BE00039D087 /* main.m in Sources */,
 				5DDDD0BF1E4A7D4F0039D087 /* AdditionQuestion.m in Sources */,
@@ -264,6 +270,7 @@
 				5DDDD0B91E4A6BE00039D087 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
