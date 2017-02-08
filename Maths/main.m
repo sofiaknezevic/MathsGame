@@ -12,15 +12,17 @@
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
 #import "QuestionFactory.h"
+#import "DivisionQuestion.h"
+#import "MultiplicationQuestion.h"
+#import "SubtractionQuestion.h"
+#import "AdditionQuestion.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        
-        
         BOOL gameOn = TRUE;
         
-        UserInput *userInput = [[UserInput alloc] init];
+        //UserInput *userInput = [[UserInput alloc] init];
         
         ScoreKeeper *yourScore = [[ScoreKeeper alloc] init];
        
@@ -28,13 +30,19 @@ int main(int argc, const char * argv[]) {
         
         QuestionManager *questionManager = [[QuestionManager alloc] initArray];
         
+        Question *testQuestion = [[Question alloc] init];
+        
         NSInteger userAnswer;
         
         printf("Math Game is starting... \nType 'quit' if you would like to quit!\n\n\n");
         
         while (gameOn) {
             
-            NSString *willYouGame = [userInput getString];
+            testQuestion = [factoryQuestion generateRandomQuestion];
+            
+            NSLog(@"%@", testQuestion.question);
+            
+            NSString *willYouGame = [UserInput getString];
             
             if([willYouGame isEqualToString:@"quit"]){
                 
@@ -48,10 +56,7 @@ int main(int argc, const char * argv[]) {
                 
             }
             
-            [factoryQuestion generateRandomQuestion];
-            
-            
-            if([Question answer] == userAnswer){
+            if(testQuestion.answer == userAnswer){
      
                 NSLog(@"Right!");
                 

@@ -21,6 +21,8 @@
         _leftValue = arc4random_uniform(91)+10;
         
         _startTime = [NSDate date];
+        
+        
        
     }
     
@@ -29,10 +31,8 @@
 
 - (NSInteger)answer
 {
-    _endTime = [NSDate date];
     
-    //testing
-    //NSLog(@"%@", _endTime);
+    _endTime = [NSDate date];
     
     return _answer;
 }

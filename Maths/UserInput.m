@@ -10,7 +10,7 @@
 
 @implementation UserInput
 
-- (NSString *)getString
++ (NSString *)getString
 {
     
     char charArray[255];

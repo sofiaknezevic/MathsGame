@@ -23,7 +23,7 @@
 {
     super.question = [NSString stringWithFormat:@"What is the answer to %i - %i?", super.rightValue, super.leftValue];
     super.answer = super.rightValue - super.leftValue;
-    NSLog(@"%@", super.question);
+    
 }
 
 @end

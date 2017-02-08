@@ -10,6 +10,6 @@
 
 @interface UserInput : NSObject
 
-- (NSString *) getString;
++ (NSString *) getString;
 
 @end
