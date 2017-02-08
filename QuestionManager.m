@@ -23,7 +23,7 @@
     return self;
 }
 
-- (void) addQuestion:(AdditionQuestion *) question
+- (void) addQuestion:(Question *) question
 {
     
     [_questions addObject:question];
@@ -37,7 +37,7 @@
     NSTimeInterval averageTime = 0;
     float counter = 1;
     
-    for (AdditionQuestion *question in _questions){
+    for (Question *question in _questions){
         
         totalTime += [question answerTime];
         averageTime = totalTime/counter;

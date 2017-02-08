@@ -8,53 +8,31 @@
 
 #import <Foundation/Foundation.h>
 #import "UserInput.h"
-#import "AdditionQuestion.h"
+#import "Question.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
-//        //testing UserInput.h && UserInput.m
-//        UserInput *userInput = [[UserInput alloc] init];
-//
-//        NSLog(@"%@", userInput.getString);
-        
-        //testing AdditionQuestion [question + answer]
-//        
-//        AdditionQuestion *additionQuestion = [[AdditionQuestion alloc] initWithQuestion];
-//        
-//        NSLog(@"%@", additionQuestion.question);
-//        NSLog(@"%ld", (long)additionQuestion.answer);
-        
         
         
         
         BOOL gameOn = TRUE;
         
+        UserInput *userInput = [[UserInput alloc] init];
+        
         ScoreKeeper *yourScore = [[ScoreKeeper alloc] init];
        
+        QuestionFactory *factoryQuestion = [[QuestionFactory alloc] init];
         
         QuestionManager *questionManager = [[QuestionManager alloc] initArray];
         
         NSInteger userAnswer;
         
-        printf("Math Game is starting... \nType 'quit' if you would like to quit!\n");
+        printf("Math Game is starting... \nType 'quit' if you would like to quit!\n\n\n");
         
         while (gameOn) {
-            
-            UserInput *userInput = [[UserInput alloc] init];
-            
-            
-            AdditionQuestion *additionQuestion = [[AdditionQuestion alloc] initWithQuestionAndWithStartTime:[NSDate date]];
-            
-            [questionManager addQuestion:additionQuestion];
-            
-            //testing date & startTime
-            
-            //NSLog(@"%@", additionQuestion.startTime);
-            
-            NSLog(@"%@", additionQuestion.question);
             
             NSString *willYouGame = [userInput getString];
             
@@ -70,11 +48,10 @@ int main(int argc, const char * argv[]) {
                 
             }
             
-            //testing!!
-            //NSLog(@"%li", (long)userAnswer);
+            [factoryQuestion generateRandomQuestion];
             
             
-            if((long)additionQuestion.answer == userAnswer){
+            if([Question answer] == userAnswer){
      
                 NSLog(@"Right!");
                 
@@ -94,21 +71,8 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@", [yourScore scoreOutput]);
             
             
-            
-            //testing endTime
-            //NSLog(@"%@", additionQuestion.endTime);
-            //[additionQuestion answer];
-            
-            //NSInteger intTime = [additionQuestion answerTime];
-            
-            //NSLog(@"%li", (long)intTime);
-            
 
         }
-        
-        
-        
-        
         
         
     }

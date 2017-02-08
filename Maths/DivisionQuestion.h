@@ -1,5 +1,5 @@
 //
-//  AdditionQuestion.h
+//  DivisionQuestion.h
 //  Maths
 //
 //  Created by Sofia Knezevic on 2017-02-08.
@@ -8,7 +8,7 @@
 
 #import "Question.h"
 
-@interface AdditionQuestion : Question
+@interface DivisionQuestion : Question
 
 - (instancetype) init;
 
